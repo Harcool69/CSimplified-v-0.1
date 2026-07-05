@@ -39,8 +39,7 @@ print "Hello world"
 ## Syntax: How to learn it?
 
 ---
-
-**To learn syntax, see the files in the examples folder**
+To learn syntax, see the files in the examples folder
 
 ---
 
