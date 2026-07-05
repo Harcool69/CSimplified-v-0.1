@@ -1,0 +1,12 @@
+# CSimplified example
+let x be 1
+print "Hello, CSimplified"
+print x
+set x to x plus 2
+if x is greater than 2 then
+  print "x is big"
+end
+while x is less than 10 do
+  print x
+  set x to x plus 1
+end

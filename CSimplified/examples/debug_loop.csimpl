@@ -1,0 +1,5 @@
+let i be 0
+while i is less than 3 do
+  print i
+  set i to i+1
+end
