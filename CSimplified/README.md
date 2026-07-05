@@ -27,6 +27,10 @@ make
 ```bash
 ./src/main your_script_path
 ```
+If you want to compile
+```bash
+gcc main.c parser.c interp.c utils.c -o main
+```
 ---
 
 ## Example
