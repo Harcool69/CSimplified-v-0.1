@@ -25,7 +25,7 @@ make
 ## Run
 
 ```bash
-./main your_script_path
+./src/main your_script_path
 ```
 ---
 
