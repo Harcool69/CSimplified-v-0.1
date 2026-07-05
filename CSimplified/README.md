@@ -25,12 +25,12 @@ make
 ## Run
 
 ```bash
-./src/main your_script_path
+./src/CSimplifed your_script_path
 ```
 If you want to compile
 ```bash
 cd src #if you are not in src directory
-gcc main.c parser.c interp.c utils.c -o main
+gcc main.c parser.c interp.c utils.c -o the_name_you_Want_to_give_to_executable
 ```
 ---
 
