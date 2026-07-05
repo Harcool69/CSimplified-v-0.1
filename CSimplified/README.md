@@ -12,14 +12,6 @@ A tiny interpreted programming language written in C.
 - Conditions
 - Printing
 - Input handling
-
----
-
-## Build
-
-```bash
-make
-```
 ---
 
 ## Run
