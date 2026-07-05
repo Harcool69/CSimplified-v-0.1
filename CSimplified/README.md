@@ -25,7 +25,7 @@ make
 ## Run
 
 ```bash
-./bin/csimplified examples/hello.csimpl
+./main your_script_path
 ```
 ---
 
