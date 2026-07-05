@@ -81,6 +81,47 @@ static Statement **parse_block(char **lines, int n, int *idx) {
                 continue;
             }
         }
+        if (starts_with(line, "def ")) {
+            // def <name> with <params>   OR   def <name>
+            char *p = line + 4;
+            Statement *st = make_stmt(STMT_DEF);
+            char *with = strstr(p, " with ");
+            if (with) {
+                *with = '\0';
+                st->name = strdup_safe(trim(p));
+                st->expr = strdup_safe(trim(with + 6));
+            } else {
+                st->name = strdup_safe(trim(p));
+                st->expr = NULL;
+            }
+            st->body = parse_block(lines, n, idx);
+            if (count >= (int)cap) { cap*=2; list = realloc(list, cap*sizeof(Statement*)); }
+            list[count++] = st;
+            continue;
+        }
+        if (starts_with(line, "class ")) {
+            // class <Name>
+            Statement *st = make_stmt(STMT_CLASS);
+            st->name = strdup_safe(trim(line + 6));
+            st->body = parse_block(lines, n, idx);
+            if (count >= (int)cap) { cap*=2; list = realloc(list, cap*sizeof(Statement*)); }
+            list[count++] = st;
+            continue;
+        }
+        if (strcmp(line, "return") == 0 || starts_with(line, "return ")) {
+            Statement *st = make_stmt(STMT_RETURN);
+            if (line[6]) st->expr = strdup_safe(trim(line + 7));
+            if (count >= (int)cap) { cap*=2; list = realloc(list, cap*sizeof(Statement*)); }
+            list[count++] = st;
+            continue;
+        }
+        if (starts_with(line, "call ")) {
+            Statement *st = make_stmt(STMT_EXPR);
+            st->expr = strdup_safe(line);
+            if (count >= (int)cap) { cap*=2; list = realloc(list, cap*sizeof(Statement*)); }
+            list[count++] = st;
+            continue;
+        }
         if (starts_with(line, "if ") && strstr(line, " then")) {
             // if <cond> then
             char *cond = strdup_safe(line + 3);

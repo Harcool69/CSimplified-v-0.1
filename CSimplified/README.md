@@ -12,6 +12,9 @@ A tiny interpreted programming language written in C.
 - Conditions
 - Printing
 - Input handling
+- Math expressions with parentheses (e.g. `let b be (a/100)*a`)
+- Functions (`def name with a, b` ... `return` ... `end`)
+- Classes with fields and methods (`class Dog` ... `end`, `new Dog`, `d.name`, `call d.bark`)
 ---
 
 ## Run

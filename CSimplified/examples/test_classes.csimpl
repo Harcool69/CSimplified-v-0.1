@@ -1,0 +1,35 @@
+# classes with fields and methods
+class Dog
+  let name be "Rex"
+  let age be 3
+
+  def bark
+    print self.name " says woof!"
+  end
+
+  def birthday
+    set age to age + 1
+    return age
+  end
+end
+
+let d be new Dog
+print "name: " d.name
+print "age: " d.age
+
+call d.bark
+
+set d.name to "Buddy"
+call d.bark
+
+let new_age be call d.birthday
+print "after birthday: " new_age
+
+# each object has its own fields
+let d2 be new Dog
+print "d2 name: " d2.name
+print "d2 age: " d2.age
+
+# fields usable in math
+let double_age be d.age * 2
+print "double age: " double_age

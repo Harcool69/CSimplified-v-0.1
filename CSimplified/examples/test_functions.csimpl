@@ -1,0 +1,31 @@
+# function definitions with def ... end
+def add with a, b
+  return a + b
+end
+
+def greet with name
+  print "Hello, " name "!"
+end
+
+def square with n
+  return n * n
+end
+
+let result be call add with 3, 4
+print "3 + 4 = " result
+
+call greet with "World"
+
+# functions can also be called with parentheses
+let sq be square(6)
+print "6 squared = " sq
+
+# recursion works too
+def factorial with n
+  if n is less than 2 then
+    return 1
+  end
+  return n * factorial(n - 1)
+end
+
+print "5! = " factorial(5)
