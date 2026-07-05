@@ -29,6 +29,7 @@ make
 ```
 If you want to compile
 ```bash
+cd src #if you are not in src directory
 gcc main.c parser.c interp.c utils.c -o main
 ```
 ---
