@@ -1,0 +1,2 @@
+set i to i+1
+print i

@@ -1,0 +1,4 @@
+let x be 1
+print x is greater than 5
+print x is less than 5
+print x is equal to 1
