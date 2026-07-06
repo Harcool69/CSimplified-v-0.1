@@ -1,0 +1,36 @@
+price = 99.50
+gst = 18.5
+gst_amount = (price * gst) / 100
+final_price = price + gst_amount
+print final_price
+
+count = 1
+count++
+count += 2
+print count
+
+whole = int(final_price)
+again_decimal = float(whole)
+cast_math = int(final_price) + 2
+as_text = str(again_decimal)
+print whole
+print cast_math
+print as_text
+
+items = [1, 2.5, "three"]
+items[1] = 4.75
+append 6 to items
+remove 1 from items
+print items
+
+settings = {"gst": 18}
+settings["price"] = price
+print settings
+
+tags = {"tax", "sale"}
+add "fresh" to tags
+remove "sale" from tags
+print tags
+
+print len(as_text)
+print type(items)

@@ -1,0 +1,6 @@
+let gst be input("Enter GST: ")
+let price be input("Enter price: ")
+let name be input("Enter product name: ")
+let gst_amount be (price*gst)/100
+let final_price be price+gst_amount
+print name " costs " final_price " after GST calculation"

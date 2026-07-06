@@ -1,0 +1,6 @@
+print "Tell which number"
+input n
+while i is less than 11 do
+    print n "X" i "=" n*i
+    set i to i plus 1
+end

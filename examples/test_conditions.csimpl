@@ -1,0 +1,8 @@
+let x be 1
+if x is greater than 5 then
+  print "false but printed"
+end
+if x is less than 5 then
+  print "true and should print"
+end
+print "done"

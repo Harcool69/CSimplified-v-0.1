@@ -1,0 +1,4 @@
+input name
+print name
+let age be input
+print age

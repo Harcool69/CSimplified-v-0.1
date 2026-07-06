@@ -1,0 +1,10 @@
+let x be 10
+if x is greater than 5 then
+  print "should print (10 > 5)"
+end
+if x is less than 5 then
+  print "should not print (10 < 5)"
+end
+if x is equal to 10 then
+  print "should print (10 == 10)"
+end
