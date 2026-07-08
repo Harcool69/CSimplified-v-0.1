@@ -1,0 +1,22 @@
+# math expressions with parentheses in let/set
+let a be 200
+let b be (a/100)*a
+print "b = " b
+
+let c be (2 + 3) * (4 - 1)
+print "c = " c
+
+set c to c % 7
+print "c mod 7 = " c
+
+# nested parentheses
+let d be ((1 + 2) * (3 + 4)) / 3
+print "d = " d
+
+# english words still work
+let e be a plus 10
+print "e = " e
+
+# negative numbers
+let f be -5 + 10
+print "f = " f
